@@ -11,19 +11,11 @@ const styles = {
   global: (props: Record<string, any>) => ({
     body: {
       fontFamily: 'Space Mono',
-      bg: mode('white', 'brand.800')(props),
+      bg: mode('white', 'gray.800')(props),
+      color: mode('gray.800', 'white')(props),
       lineHeight: 'base'
     }
   })
 }
 
-const colors = {
-  brand: {
-    100: '#f6f8ff',
-    200: '#fefefe',
-    500: '#4b6a9b',
-    800: '#2b3442'
-  }
-}
-
-export const theme = extendTheme({ config, colors, styles })
+export const theme = extendTheme({ config, styles })
