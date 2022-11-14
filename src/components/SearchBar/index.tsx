@@ -64,11 +64,15 @@ export const SearchBar = () => {
             />
             <AutoCompleteList
               zIndex='1000'
+              gap='2'
+              p='0.5rem'
+              rounded='5px'
             >
               {searchedUsers && searchedUsers.map((user, cid) => (
                 <AutoCompleteItem
                   key={`option-${cid}`}
                   value={user}
+                  rounded='10px'
                   bg={listColor}
                 >
                   <ChakraLink as={Link} to={`/${user?.login}`} textAlign='start' justifyContent='center'>

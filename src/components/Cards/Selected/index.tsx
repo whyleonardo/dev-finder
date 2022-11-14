@@ -12,7 +12,7 @@ import { FaMapMarkerAlt, FaLink, FaTwitter, FaRegBuilding } from 'react-icons/fa
 export const Selected = () => {
   const { username } = useParams()
 
-  const bgColor = useColorModeValue('gray.300', 'gray.700')
+  const bgColor = useColorModeValue('gray.300', 'gray.800')
 
   async function getUser() {
     const { data } = await axios.get(`https://api.github.com/users/${username}`, {
